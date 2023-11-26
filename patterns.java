@@ -32,32 +32,27 @@ class Main{
            
         }
     }
-         static void pattern12(int n)
+ static void pattern12(int n)
     {
         for(int row=1;row<=n;row++)
         {
-            int totalspace=n-row;
-            for(int s=1;s<=totalspace;s++)
+            int space=n-row;
+            for(int s=1;s<=space;s++)
             {
                 System.out.print(" ");
             }
-             
-            
-            for(int col=1;col<=row;col++)
-              
+            for(int col=1;col<=2*row-1;col++)
             {
-               
-                if(col==1 ||row==5||col==row)
+                if(col==1||col==2*row-1||row==n){
+                     System.out.print("*");
+                }
+                else
                 {
-                    System.out.print("* ");
+                    System.out.print(" ");
                 }
-                else{
-                     System.out.print("  ");
-                    
-                }
+               
             }
             System.out.print("\n");
-           
         }
     }
      
