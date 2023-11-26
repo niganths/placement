@@ -4,32 +4,25 @@ class Main{
         pattern13(5);
     } 
     
-   static void pattern13(int n)
+ static void pattern13(int n)
     {
         for(int row=1;row<=n;row++)
         {
-            int totalspace=row-1;
-            for(int s=1;s<=totalspace;s++)
+            int space=row-1;
+            for(int s=1;s<=space;s++)
             {
                 System.out.print(" ");
             }
-             
-            
-            for(int col=n;col>=row;col--)
-              
+            for(int col=1;col<=2*n-2*row+1;col++)
             {
-               
-                if(col==n ||row==1||col==row)
+                if(col==1||row==1||col== 2 * (n - row) + 1){
+                System.out.print("*");}
+                else
                 {
-                    System.out.print("* ");
-                }
-                else{
-                     System.out.print("  ");
-                    
+                    System.out.print(" ");
                 }
             }
             System.out.print("\n");
-           
         }
     }
  static void pattern12(int n)
